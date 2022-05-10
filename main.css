@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    display: flex;
+}
+
+.container .imgBox{
+    position: relative;
+    width: 450px;
+    height: 100%;
+    background: url('bg.jpg');
+    background-size: cover;
+}
+.container #app{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 450px);
+}
+
+.container #app h2{
+    text-align: center;
+    font-size: 3.5rem;
+    color: #755bea;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 700;
+    line-height: 4em;
+}
+
+#app #value{
+    font-size: 6em;
+    font-weight: 700;
+}
+
+#app #taskName{
+    text-align: center;
+    font-size: 2.5rem;
+}
+.title{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.form #bAdd, button{
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border: none;
+    border-radius: 40px;
+    outline: none;
+    background: linear-gradient(90deg,#755bea,#ff72c0);
+    cursor: pointer;
+    transition: .2s transform ease-in-out;
+}
+
+.form #bAdd:hover, button:hover{
+    background: linear-gradient(90deg,#44424d,#5b8292);
+    
+}
+
+#tasks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.task{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.task .completed{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.done{
+    display: inline-block;
+    padding: 5px;
+    background-color: #ccc;
+}
+
+input[type="text"]{
+    padding: 10px;
+    border: solid 1px #ccc;
+    width: 300px;
+}
+input[type="text"]:focus{
+    outline: none;
+    border: 1px solid #f88ec2;
+}
+
+
+
+@media (max-width: 991px){
+    .container .imgBox{
+        display: none;
+    }
+    .container #app {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px){
+    .container #app h2{
+        text-align: center;
+        font-size: 3.1em;
+    }
+}
